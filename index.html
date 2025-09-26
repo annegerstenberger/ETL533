@@ -53,6 +53,14 @@ https://templatemo.com/tm-504-page-one
       <img src="img/bg-03.jpg" alt="Image 1" class="story-image">
     </div>
 
+    <div class="story-block">
+      <img src="img/bg-07.jpg" alt="Image 1" class="story-image">
+    </div>
+
+    <div class="story-block">
+      <img src="img/bg-08.jpg" alt="Image 1" class="story-image">
+    </div>
+
     <!-- Image Block 2 with Text -->
    <div class="image-overlay-block">
   <img src="img/bg-04.jpg" alt="Image with overlay text">
@@ -228,7 +236,7 @@ playBtn.addEventListener('click', () => {
 window.addEventListener('scroll', () => {
   if (!music.paused) {
     const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-    const maxScroll = 1000; 
+    const maxScroll = 2000; 
     let volume = 1 - scrollTop / maxScroll;
     volume = Math.max(0, Math.min(1, volume)); // clamp between 0 and 1
     music.volume = volume;
