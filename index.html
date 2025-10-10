@@ -1,21 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+<head> <!--section of your HTML is the metadata zone — it doesn’t display on the page, but it tells the browser how to prepare and load the page.-->
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <title>Where is Wally - Responsive HTML CSS Template</title>
+    
+
 <!--
 Page One Template
 https://templatemo.com/tm-504-page-one
 -->
     <!-- load stylesheets -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400">  <!-- Google web font "Open Sans" -->
-    <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">                <!-- Font Awesome -->
-    <link rel="stylesheet" href="css/bootstrap.min.css">                                      <!-- Bootstrap style -->
-    <link rel="stylesheet" href="css/magnific-popup.css">                                     <!-- Magnific Popup -->
-    <link rel="stylesheet" href="css/templatemo-style.css">                                   <!-- Templatemo style -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400">  <!-- Google web font "Open Sans" -->          <!-- Font Awesome -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">                                      <!-- Bootstrap style -->                                   <!-- Magnific Popup -->
+    <link rel="stylesheet" href="css/templatemo-style.css">     
+    <link rel="preload" as="image" href="img/1_Landing.jpg">
+                              <!-- Templatemo style -->
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -25,19 +27,23 @@ https://templatemo.com/tm-504-page-one
           <![endif]-->
       </head>
 
-      <body>
+      <body> <!--The visible stuff (your story, images, buttons, etc.) goes inside here-->
         
         <div class="container-fluid" id="main">
-            <!-- Home -->
-            <section class="tm-section tm-section-home" id="home" style="background-image: url('img/bg-01.jpg');">
+            <!-- Landing Page -->
+            <section class="tm-section tm-section-home" id="home" style="background-image: url('img/1_Landing.jpg');">
                 <div style="position: relative; width: 100%; height: 100%; min-height: 100vh;">
                   <div class="music-btn-container">
                     <button id="playMusicBtn">Start here</button>
-                    <audio id="backgroundMusic" src="img/HoliznaCC0-Death-trimmed.mov" loop></audio>
+                    <audio id="backgroundMusic" preload="auto" loop>
+  <source src="img/HoliznaCC0-Death-trimmed.m4a" type="audio/mp4">
+  
+  <!-- Fallback text -->
+  Your browser does not support HTML5 audio.
+</audio>
                   </div>
                 </div>
     </section> 
-  <div class="section spacer-section content-spacer visible" data-section-behavior="default-spacer" data-layer-name="over" style="height: 10px; background: #f6f5f5; width: 100%; display: block;"></div>
         
   <!-- Digital Story Section -->
 <section id="story" class="tm-section story-section">
@@ -46,39 +52,122 @@ https://templatemo.com/tm-504-page-one
     <!-- Image Block 1 -->
 
   <div class="story-block">
-      <img src="img/bg-02.jpg" alt="Image 1" class="story-image">
+      <img loading="lazy" decoding="async" src="img/2_Human.png" alt="Image 1" class="story-image">
     </div>
 
+    <!-- Image Block 2 -->
     <div class="story-block">
-      <img src="img/bg-03.jpg" alt="Image 1" class="story-image">
+      <img loading="lazy" decoding="async" src="img/3_Body.png" alt="Image 1" class="story-image">
     </div>
 
+    <!-- Image Block 3 -->
     <div class="story-block">
-      <img src="img/bg-07.jpg" alt="Image 1" class="story-image">
+      <img loading="lazy" decoding="async" src="img/4_Bloodstream.png" alt="Image 1" class="story-image">
     </div>
 
+    <!-- Image Block 4 -->
     <div class="story-block">
-      <img src="img/bg-08.jpg" alt="Image 1" class="story-image">
+      <img loading="lazy" decoding="async" src="img/5_skatepark.png" alt="Image 1" class="story-image">
     </div>
 
-    <!-- Image Block 2 with Text -->
+    <!-- Image Block 5 with Text -->
    <div class="image-overlay-block">
-  <img src="img/bg-04.jpg" alt="Image with overlay text">
+  <img loading="lazy" decoding="async" src="img/6_Bloodstream2.png" alt="Image with overlay text">
   <div class="overlay-text">
     <h2>Your Title Here</h2>
     <p>This is your paragraph of text.</p>
   </div>
 </div>
 
-    <!-- Image Block 4 -->
+    <!-- Image Block 6 -->
     <div class="story-block">
-      <img src="img/bg-05.jpg" alt="Image 3" class="story-image">
+      <img loading="lazy" decoding="async" src="img/7_Alarm1.png" alt="Image 3" class="story-image">
     </div>
     
-<!-- Image Block 5 -->
+<!-- Image Block 7 -->
     <div class="story-block">
-      <img src="img/bg-06.jpg" alt="Image 3" class="story-image">
+      <img loading="lazy" decoding="async" src="img/8_Alarm2.png" alt="Image 3" class="story-image">
     </div>
+
+    <!-- Image Block 8 -->
+    <div class="story-block">
+      <img loading="lazy" decoding="async" src="img/9_Alarm3.png" alt="Image 3" class="story-image">
+    </div>
+
+    <!-- Image Block 9 -->
+    <div class="story-block">
+      <img loading="lazy" decoding="async" src="img/10_Alarm4.png" alt="Image 3" class="story-image">
+      </div>
+
+      <!-- Image Block 10 -->
+    <div class="story-block">
+      <img loading="lazy" decoding="async" src="img/11_HumanHurt.png" alt="Image 3" class="story-image">
+      </div>
+
+      <!-- Image Block 11 -->
+    <div class="story-block">
+      <img loading="lazy" decoding="async" src="img/12_SkateAccident.png" alt="Image 3" class="story-image">
+      </div>
+
+      <!-- Image Block 12-->
+      <div class="story-block">
+      <img loading="lazy" decoding="async" src="img/13_Alarm5copy.png" alt="Image 3" class="story-image">
+      </div>
+
+      <!-- Image Block 13 -->
+      <div class="story-block">
+      <img loading="lazy" decoding="async" src="img/14_Nucleus.jpg" alt="Image 3" class="story-image">
+      </div>
+
+      <!-- Image Block 14 -->
+      <div class="story-block">
+      <img loading="lazy" decoding="async" src="img/15_Mitos.jpg" alt="Image 3" class="story-image">
+      </div>
+
+      <!-- Image Block 15 -->
+      <div class="story-block">
+      <img loading="lazy" decoding="async" src="img/16_Lysosomes.jpg" alt="Image 3" class="story-image">
+      </div>
+
+      <!-- Image Block 16 -->
+      <div class="story-block">
+      <img loading="lazy" decoding="async" src="img/18_WallyontheWay.png" alt="Image 3" class="story-image">
+      </div>
+
+      <!-- Image Block 17 -->
+      <div class="story-block">
+      <img loading="lazy" decoding="async" src="img/19_OnSite.png" alt="Image 3" class="story-image">
+      </div>
+
+      <!-- Image Block 18 -->
+      <div class="story-block">
+      <img loading="lazy" decoding="async" src="img/20_Phago1.png" alt="Image 3" class="story-image">
+      </div>
+
+      <!-- Image Block 19 -->
+      <div class="story-block">
+      <img loading="lazy" decoding="async" src="img/21_Phago2.png" alt="Image 3" class="story-image">
+      </div>
+
+      <!-- Image Block 20 -->
+      <div class="story-block">
+      <img loading="lazy" decoding="async" src="img/22_Phago3.png" alt="Image 3" class="story-image">
+      </div>
+
+      <!-- Image Block 21 -->
+      <div class="story-block">
+      <img loading="lazy" decoding="async" src="img/23_Phago4.png" alt="Image 3" class="story-image">
+      </div>
+
+      <!-- Image Block 22 -->
+    <div class="story-block">
+      <img loading="lazy" decoding="async" src="img/24_Party.png" alt="Image 3" class="story-image">
+      </div>
+
+      <!-- Image Block 23 -->
+      <div class="story-block">
+      <img loading="lazy" decoding="async" src="img/25_Humancopy.png" alt="Image 3" class="story-image">
+      </div>
 
     <!-- Add more blocks as needed -->
 
@@ -87,133 +176,72 @@ https://templatemo.com/tm-504-page-one
          
 
          
-        </div>
-        
-        <!-- load JS files -->
-        <script src="js/jquery-1.11.3.min.js"></script>         <!-- https://jquery.com/download/ -->
-        <script src="js/isotope.pkgd.min.js"></script>          <!-- https://isotope.metafizzy.co/ -->
-        <script src="js/imagesloaded.pkgd.min.js"></script>     <!-- https://imagesloaded.desandro.com/ --> 
-        <script src="js/jquery.magnific-popup.min.js"></script> <!-- http://dimsemenov.com/plugins/magnific-popup/ -->
-        <script src="js/parallax.min.js"></script>
-        <script>     
-            $(document).ready(function () {
-                // Isotope for Gallery
-                if ( $('.iso-box-wrapper').length > 0 ) { 
+       <!-- load JS files -->
+<script src="js/jquery-1.11.3.min.js"></script>
 
-                    var $container  = $('.iso-box-wrapper'), 
-                    $imgs     = $('.iso-box img');
 
-                    $container.imagesLoaded(function () {
-                        $container.isotope({
-                            layoutMode: 'fitRows',
-                            itemSelector: '.iso-box'
-                        });
-                        $imgs.load(function(){
-                            $container.isotope('reLayout');
-                        })
-                    });
-
-                    //filter items on button click
-                    $('.filter-wrapper li a').click(function(){
-                        var $this = $(this), filterValue = $this.attr('data-filter');
-                            $container.isotope({ 
-                                filter: filterValue
-                            });             
-
-                        // don't proceed if already selected
-                        if ( $this.hasClass('selected') ) { 
-                            return false; 
-                        }
-
-                        var filter_wrapper = $this.closest('.filter-wrapper');
-                        filter_wrapper.find('.selected').removeClass('selected');
-                        $this.addClass('selected');
-
-                        return false;
-                    });
-                }
-
-                // Magnific Popup for Gallery
-                $('.iso-box-wrapper').magnificPopup({
-                    delegate: 'a', // child items selector, by clicking on it popup will open
-                    type: 'image',
-                    gallery:{enabled:true}
-                });
-
-                // Smooth scrolling (https://css-tricks.com/snippets/jquery/smooth-scrolling/)
-                // Select all links with hashes
-                $('a[href*="#"]')
-                  // Remove links that don't actually link to anything
-                  .not('[href="#"]')
-                  .not('[href="#0"]')
-                  .click(function(event) {
-                    // On-page links
-                    if (
-                      location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') 
-                      && 
-                      location.hostname == this.hostname
-                    ) {
-                      // Figure out element to scroll to
-                      var target = $(this.hash);
-                      target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
-                      // Does a scroll target exist?
-                      if (target.length) {
-                        // Only prevent default if animation is actually gonna happen
-                        event.preventDefault();
-                        $('html, body').animate({
-                          scrollTop: target.offset().top
-                        }, 600, function() {
-                          // Callback after animation
-                          // Must change focus!
-                          var $target = $(target);
-                          $target.focus();
-                          if ($target.is(":focus")) { // Checking if the target was focused
-                            return false;
-                          } else {
-                            $target.attr('tabindex','-1'); // Adding tabindex for elements not focusable
-                            $target.focus(); // Set focus again
-                          };
-                        });
-                      }
-                    }
-                  });         
-            });
-    </script>   
-<!-- Text-to-Speech script goes here, right before closing </body> -->
-    <script>
-      function speakText(elementId) {
-        const element = document.getElementById(elementId);
-        const text = element.innerText || element.textContent;
-        const utterance = new SpeechSynthesisUtterance(text);
-        speechSynthesis.speak(utterance);
-      }
-
-      function checkAnswer() {
-        const form = document.getElementById('quiz-form');
-        const result = document.getElementById('result');
-        const selectedInput = form.querySelector('input[name="answer"]:checked');
-        const selected = selectedInput ? selectedInput.value : null;
-
-        if (!selected) {
-          result.textContent = "Please select an answer!";
-          result.style.color = "red";
-          return;
-        }
-
-        if (selected === "Paris") {
-          result.textContent = "Correct! 🎉";
-          result.style.color = "green";
-        } else {
-          result.textContent = "Wrong. Try again!";
-          result.style.color = "red";
+<script>
+  // Smooth scrolling
+  $(document).ready(function () {
+    $('a[href*="#"]').not('[href="#"]').not('[href="#0"]').click(function(event) {
+      if (
+        location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') &&
+        location.hostname == this.hostname
+      ) {
+        var target = $(this.hash);
+        target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+        if (target.length) {
+          event.preventDefault();
+          $('html, body').animate({
+            scrollTop: target.offset().top
+          }, 600, function() {
+            var $target = $(target);
+            $target.focus();
+            if (!$target.is(":focus")) {
+              $target.attr('tabindex','-1');
+              $target.focus();
+            }
+          });
         }
       }
-    </script>
+    });
+  });
+
+  // Text-to-Speech
+  function speakText(elementId) {
+    const element = document.getElementById(elementId);
+    const text = element.innerText || element.textContent;
+    const utterance = new SpeechSynthesisUtterance(text);
+    speechSynthesis.speak(utterance);
+  }
+
+  // Quiz checker (optional)
+  function checkAnswer() {
+    const form = document.getElementById('quiz-form');
+    const result = document.getElementById('result');
+    const selectedInput = form.querySelector('input[name="answer"]:checked');
+    const selected = selectedInput ? selectedInput.value : null;
+
+    if (!selected) {
+      result.textContent = "Please select an answer!";
+      result.style.color = "red";
+      return;
+    }
+
+    if (selected === "Paris") {
+      result.textContent = "Correct! 🎉";
+      result.style.color = "green";
+    } else {
+      result.textContent = "Wrong. Try again!";
+      result.style.color = "red";
+    }
+  }
+</script>
 <!-- Footer -->
 <footer class="tm-footer">
   <div class="tm-copyright-div">
      <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/">
-  <img src="img/footer-logo.png" alt="Logo" />
+  <img loading="lazy" decoding="async" src="img/footer-logo.png" alt="Logo" />
 </a>
     <p class="tm-copyright-text">
       &copy; <span class="tm-current-year">2025</span> Anne Gerstenberger.<br>
