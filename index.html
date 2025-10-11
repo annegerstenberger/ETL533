@@ -58,8 +58,16 @@ https://templatemo.com/tm-504-page-one
   <div class="image-overlay-block reveal" id="scene-human">
       <img src="img/2_Human.png" alt="Image 1">
   <div class="overlay-text overlay-text--top-right overlay-text--panel overlay-text--bordered">
-    <h2></h2><p>Hi everyone! This is Lucy, and Lucy is my home. I would do anything for her!
-On a good day, you can find me down here…</p>
+    <h2><button class="voice-btn" onclick="playVoice('voiceover-human')">
+    <img src="img/speaker.png" alt="Play narration">
+  </button> </h2><p>Hi everyone! This is Lucy, and Lucy is my home. I would do anything for her!
+On a good day, you can find me down here…</p> 
+  
+
+  <!-- hidden audio element -->
+  <audio id="voiceover-human" preload="auto">
+    <source src="img/Voiceover-human.m4a" type="audio/mp4">
+  </audio>
     </div>
     </div>
 
@@ -67,37 +75,74 @@ On a good day, you can find me down here…</p>
     <div class="image-overlay-block reveal" id="scene-circulatory">
       <img src="img/3_Body.png" alt="Image 1">
      <div class="overlay-text overlay-text--top-left overlay-text--panel overlay-text--bordered">
-    <h2></h2><p>In the <a href="glossary.html#g-circulatory">circulatory system!</a>! I am a very <a href="glossary.html#g-specialised">special cell</a>, quite powerful, and I make up an important part of Lucy’s blood because I am a…</p>
+    <h2><button class="voice-btn" onclick="playVoice('voiceover-circulatory')">
+    <img src="img/speaker.png" alt="Play narration">
+  </button> </h2><p>In the <a href="glossary.html#g-circulatory">circulatory system!</a>! I am a very <a href="glossary.html#g-specialised">special cell</a>, quite powerful, and I make up an important part of Lucy’s blood because I am a…</p>
       </div>
       </div>
+
+       <!-- hidden audio element -->
+  <audio id="voiceover-circulatory" preload="auto">
+    <source src="img/Voiceover-circulatory.m4a" type="audio/mp4">
+  </audio>
+    </div>
+    </div>
 
     <!-- Image Block 3 -->
    <div class="image-overlay-block reveal" id="scene-bloodstream">
   <img src="img/6_Bloodstream2.png" alt="Image 3">
   <div class="overlay-text overlay-text--top-left overlay-text--panel overlay-text--bordered">
-    <h2></h2><p>A <a href="glossary.html#g-wbc">white blood cell</a> (Campbell, 2008)! I watch out for intruders called pathogens. These can be bacteria or viruses.
+    <h2><button class="voice-btn" onclick="playVoice('voiceover-bloodstream')">
+    <img src="img/speaker.png" alt="Play narration">
+  </button></h2><p>A <a href="glossary.html#g-wbc">white blood cell</a> (Campbell, 2008)! I watch out for intruders called pathogens. These can be bacteria or viruses.
 I fight them whenever Lucy gets sick. Here in the bloodstream, you can also see my brothers and sisters, the red blood cells.
 They carry oxygen to all parts of Lucy’s body!
 It seems like Lucy is very active at the moment. Those red blood cells are working really hard!</p>
   </div>
   </div>
 
+     <!-- hidden audio element -->
+  <audio id="voiceover-bloodstream" preload="auto">
+    <source src="img/Voiceover-bloodstream.m4a" type="audio/mp4">
+  </audio>
+    </div>
+    </div>
+
     <!-- Image Block 4 -->
     <div class="image-overlay-block reveal" id="scene-skatepark">
       <img src="img/5_skatepark.png" alt="Image 1">
       <div class="overlay-text overlay-text--bottom-right overlay-text--panel overlay-text--bordered">
-        <h2></h2><p>She’s probably at the skate park — one of her favourite things to do!</p>
+        <h2><button class="voice-btn" onclick="playVoice('voiceover-skatepark')">
+    <img src="img/speaker.png" alt="Play narration">
+  </button></h2><p>She’s probably at the skate park. That's one of her favourite things to do!</p>
       </div>
       </div>
+
+       <!-- hidden audio element -->
+  <audio id="voiceover-skatepark" preload="auto">
+    <source src="img/Voiceover-skatepark.m4a" type="audio/mp4">
+  </audio>
+    </div>
+    </div>
 
     <!-- Image Block 6 -->
     <div class="image-overlay-block reveal" id="scene-alarm">
       <img src="img/7_Alarm1.png" alt="Image 3">
       <div class="overlay-text overlay-text--top-right overlay-text--panel overlay-text--bordered">
-        <h2></h2><p>Oh oh!! Something has happened! The alarm is going off!
+        <h2><button class="voice-btn" onclick="playVoice('voiceover-alarm')">
+    <img src="img/speaker.png" alt="Play narration">
+  </button></h2><p>Oh oh!! Something has happened! The alarm is going off!
 </p>
     </div>
       </div>
+
+        <!-- hidden audio element -->
+  <audio id="voiceover-alarm" preload="auto">
+    <source src="img/Voiceover-alarm.m4a" type="audio/mp4">
+  </audio>
+    </div>
+    </div>
+
 
 <!-- Image Block 7 -->
     <div class="story-block reveal" id="alarm-block">
@@ -111,120 +156,245 @@ It seems like Lucy is very active at the moment. Those red blood cells are worki
     <div class="image-overlay-block reveal" id="scene-alarm4">
       <img loading="lazy" decoding="async" src="img/10_Alarm4.png" alt="Image 3" class="story-image">
       <div class="overlay-text overlay-text--top-right overlay-text--panel overlay-text--bordered">
-        <h2></h2><p>Something must have happened to Lucy. It seems like pathogens have entered the body!</p>
+        <h2><button class="voice-btn" onclick="playVoice('voiceover-alarm4')">
+    <img src="img/speaker.png" alt="Play narration">
+  </button></h2><p>Something must have happened to Lucy. It seems like pathogens have entered the body!</p>
       </div>
+    </div>
+
+     <!-- hidden audio element -->
+  <audio id="voiceover-alarm4" preload="auto">
+    <source src="img/Voiceover-alarm4.m4a" type="audio/mp4">
+  </audio>
+    </div>
     </div>
 
       <!-- Image Block 10 -->
     <div class="image-overlay-block reveal" id="scene-hurt">
       <img loading="lazy" decoding="async" src="img/11_HumanHurt.png" alt="Image 3" class="story-image">
       <div class="overlay-text overlay-text--bottom-left overlay-text--panel overlay-text--bordered">
-        <h2></h2><p>Lucy seems to be in shock.</p>
+        <h2><button class="voice-btn" onclick="playVoice('voiceover-hurt')">
+    <img src="img/speaker.png" alt="Play narration">
+  </button></h2><p>Lucy seems to be in shock.</p>
       </div>
+    </div>
+
+    <!-- hidden audio element -->
+  <audio id="voiceover-hurt" preload="auto">
+    <source src="img/Voiceover-hurt.m4a" type="audio/mp4">
+  </audio>
+    </div>
     </div>
 
       <!-- Image Block 11 -->
     <div class="image-overlay-block reveal" id="scene-skateaccident">
       <img loading="lazy" decoding="async" src="img/12_SkateAccident.png" alt="Image 3" class="story-image">
       <div class="overlay-text overlay-text--bottom-right overlay-text--panel overlay-text--bordered">
-        <h2></h2><p>Lucy fell off her skateboard! There’s a cut in her skin, which means pathogens can enter.</p>
+        <h2><button class="voice-btn" onclick="playVoice('voiceover-skateaccident')">
+    <img src="img/speaker.png" alt="Play narration">
+  </button></h2><p>Lucy fell off her skateboard! There’s a cut in her skin, which means pathogens can enter.</p>
       </div>
+    </div>
+
+    <!-- hidden audio element -->
+  <audio id="voiceover-skateaccident" preload="auto">
+    <source src="img/Voiceover-skateaccident.m4a" type="audio/mp4">
+  </audio>
+    </div>
     </div>
 
       <!-- Image Block 12-->
       <div class="image-overlay-block reveal" id="scene-alarm5">
       <img loading="lazy" decoding="async" src="img/13_Alarm5copy.png" alt="Image 3" class="story-image">
       <div class="overlay-text overlay-text--top-right overlay-text--panel overlay-text--bordered">
-        <h2></h2><p>I need to get to work!</p>
+        <h2><button class="voice-btn" onclick="playVoice('voiceover-alarm5')">
+    <img src="img/speaker.png" alt="Play narration">
+  </button></h2><p>I need to get to work!</p>
       </div>
+    </div>
+
+      <!-- hidden audio element -->
+  <audio id="voiceover-alarm5" preload="auto">
+    <source src="img/Voiceover-alarm5.m4a" type="audio/mp4">
+  </audio>
+    </div>
     </div>
 
       <!-- Image Block 13 -->
       <div class="image-overlay-block reveal" id="scene-nucleus">
       <img loading="lazy" decoding="async" src="img/14_Nucleus.jpg" alt="Image 3" class="story-image">
       <div class="overlay-text overlay-text--top-right overlay-text--panel overlay-text--bordered">
-        <h2></h2><p><a href="glossary.html#g-nucleus">Nucleus</a>! Prepare everything. It's time to get active!</p>
+        <h2><button class="voice-btn" onclick="playVoice('voiceover-nucleus')">
+    <img src="img/speaker.png" alt="Play narration">
+  </button></h2><p><a href="glossary.html#g-nucleus">Nucleus</a>! Prepare everything. It's time to get active!</p>
       </div>
+    </div>
+
+     <!-- hidden audio element -->
+  <audio id="voiceover-nucleus" preload="auto">
+    <source src="img/Voiceover-nucleus.m4a" type="audio/mp4">
+  </audio>
+    </div>
     </div>
 
       <!-- Image Block 14 -->
       <div class="image-overlay-block reveal" id="scene-mitochondria">
       <img loading="lazy" decoding="async" src="img/15_Mitos.jpg" alt="Image 3" class="story-image">
       <div class="overlay-text overlay-text--top-right overlay-text--panel overlay-text--bordered">
-        <h2></h2><p><a href="glossary.html#g-mitochondria">Mitochondria</a>! We need more energy!</p>
+        <h2><button class="voice-btn" onclick="playVoice('voiceover-mitos')">
+    <img src="img/speaker.png" alt="Play narration">
+  </button></h2><p><a href="glossary.html#g-mitochondria">Mitochondria</a>! We need more energy!</p>
       </div>
+    </div>
+
+    <!-- hidden audio element -->
+  <audio id="voiceover-mitos" preload="auto">
+    <source src="img/Voiceover-mitos.m4a" type="audio/mp4">
+  </audio>
+    </div>
     </div>
 
       <!-- Image Block 15 -->
       <div class="image-overlay-block reveal" id="scene-lysosome">
       <img loading="lazy" decoding="async" src="img/16_Lysosomes.jpg" alt="Image 3" class="story-image">
       <div class="overlay-text overlay-text--top-right overlay-text--panel overlay-text--bordered">
-        <h2></h2><p><a href="glossary.html#g-lysosome">Lysosomes</a> ! Get ready to defend!</p>
+        <h2><button class="voice-btn" onclick="playVoice('voiceover-lysosomes')">
+    <img src="img/speaker.png" alt="Play narration">
+  </button></h2><p><a href="glossary.html#g-lysosome">Lysosomes</a> ! Get ready to defend!</p>
       </div>
+    </div>
+
+      <!-- hidden audio element -->
+  <audio id="voiceover-lysosomes" preload="auto">
+    <source src="img/Voiceover-lysosomes.m4a" type="audio/mp4">
+  </audio>
+    </div>
     </div>
 
       <!-- Image Block 16 -->
       <div class="image-overlay-block reveal" id="scene-wallyontheway">
       <img loading="lazy" decoding="async" src="img/18_WallyontheWay.png" alt="Image 3" class="story-image">
       <div class="overlay-text overlay-text--top-right overlay-text--panel overlay-text--bordered">
-        <h2></h2><p>Off we go — let’s fight those intruders!</p>
+        <h2><button class="voice-btn" onclick="playVoice('voiceover-wallyontheway')">
+    <img src="img/speaker.png" alt="Play narration">
+  </button></h2><p>Off we go! Let’s fight those intruders!</p>
       </div>
+    </div>
+
+    <!-- hidden audio element -->
+  <audio id="voiceover-wallyontheway" preload="auto">
+    <source src="img/Voiceover-wallyontheway.m4a" type="audio/mp4">
+  </audio>
+    </div>
     </div>
 
       <!-- Image Block 17 -->
       <div class="image-overlay-block reveal" id="scene-onsite">
       <img loading="lazy" decoding="async" src="img/19_OnSite.png" alt="Image 3" class="story-image">
       <div class="overlay-text overlay-text--top-right overlay-text--panel overlay-text--bordered">
-        <h2></h2><p>I see it! That’s an open wound. Many pathogens can enter that way.
+        <h2><button class="voice-btn" onclick="playVoice('voiceover-onsite')">
+    <img src="img/speaker.png" alt="Play narration">
+  </button></h2><p>I see it! That’s an open wound. Many pathogens can enter that way.
 Luckily, there are lots of white blood cells here to help!</p>
       </div>
+    </div>
+
+    <!-- hidden audio element -->
+  <audio id="voiceover-onsite" preload="auto">
+    <source src="img/Voiceover-onsite.m4a" type="audio/mp4">
+  </audio>
+    </div>
     </div>
 
       <!-- Image Block 18 -->
       <div class="image-overlay-block reveal" id="scene-phagocytosis">
       <img loading="lazy" decoding="async" src="img/20_Phago1.png" alt="Image 3" class="story-image">
       <div class="overlay-text overlay-text--bottom-left overlay-text--panel overlay-text--bordered">
-        <h2></h2><p>We’re catching every single one of those intruders.  <a href="glossary.html#g-phagocytosis">Phagocytosis</a> in action!</p>
+        <h2><button class="voice-btn" onclick="playVoice('voiceover-phagocytosis1')">
+    <img src="img/speaker.png" alt="Play narration">
+  </button></h2><p>We’re catching every single one of those intruders.  <a href="glossary.html#g-phagocytosis">Phagocytosis</a> in action!</p>
       </div>
+    </div>
+
+    <!-- hidden audio element -->
+  <audio id="voiceover-phagocytosis1" preload="auto">
+    <source src="img/Voiceover-phagocytosis1.m4a" type="audio/mp4">
+  </audio>
+    </div>
     </div>
 
       <!-- Image Block 19 -->
       <div class="image-overlay-block reveal" id="scene-phagocytosis-2">
       <img loading="lazy" decoding="async" src="img/21_Phago2.png" alt="Image 3" class="story-image">
       <div class="overlay-text overlay-text--top-right overlay-text--panel overlay-text--bordered">
-        <h2></h2><p>Phagocytosis continues…</p>
+        <h2><button class="voice-btn" onclick="playVoice('voiceover-phagocytosis2')">
+    <img src="img/speaker.png" alt="Play narration">
+  </button></h2><p>Phagocytosis continues…</p>
       </div>
+    </div>
+
+    <!-- hidden audio element -->
+  <audio id="voiceover-phagocytosis2" preload="auto">
+    <source src="img/Voiceover-phagocytosis2.m4a" type="audio/mp4">
+  </audio>
+    </div>
     </div>
 
       <!-- Image Block 20 -->
       <div class="image-overlay-block reveal" id="scene-phagocytosis-3">
       <img loading="lazy" decoding="async" src="img/22_Phago3.png" alt="Image 3" class="story-image">
       <div class="overlay-text overlay-text--top-right overlay-text--panel overlay-text--bordered">
-        <h2></h2><p>In action, I am engulfing the virus!</p>
+        <h2><button class="voice-btn" onclick="playVoice('voiceover-phagocytosis3')">
+    <img src="img/speaker.png" alt="Play narration">
+  </button></h2><p>In action, I am engulfing the virus!</p>
       </div>
+    </div>
+
+    <!-- hidden audio element -->
+  <audio id="voiceover-phagocytosis3" preload="auto">
+    <source src="img/Voiceover-phagocytosis3.m4a" type="audio/mp4">
+  </audio>
+    </div>
     </div>
 
       <!-- Image Block 21 -->
       <div class="image-overlay-block reveal" id="scene-phagocytosis-4">
       <img loading="lazy" decoding="async" src="img/23_Phago4.png" alt="Image 3" class="story-image">
       <div class="overlay-text overlay-text--top-left overlay-text--panel overlay-text--bordered">
-        <h2></h2><p>…Successful!!</p>
+        <h2><button class="voice-btn" onclick="playVoice('voiceover-phagocytosis4')">
+    <img src="img/speaker.png" alt="Play narration">
+  </button></h2><p>…Successful!!</p>
       </div>
         </div>
+
+        <!-- hidden audio element -->
+  <audio id="voiceover-phagocytosis4" preload="auto">
+    <source src="img/Voiceover-phagocytosis4.m4a" type="audio/mp4">
+  </audio>
+    </div>
+    </div>
 
       <!-- Image Block 22 -->
     <div class="image-overlay-block reveal" id="scene-party">
       <img loading="lazy" decoding="async" src="img/24_Party.png" alt="Image 3" class="story-image">
       <div class="overlay-text overlay-text--top-right overlay-text--panel overlay-text--bordered">
-        <h2></h2><p>Yeah!! We did it!</p>
+        <h2><button class="voice-btn" onclick="playVoice('voiceover-party')">
+    <img src="img/speaker.png" alt="Play narration">
+  </button></h2><p>Yeah!! We did it!</p>
       </div>
+    </div>
+
+    <!-- hidden audio element -->
+  <audio id="voiceover-party" preload="auto">
+    <source src="img/Voiceover-party.m4a" type="audio/mp4">
+  </audio>
+    </div>
     </div>
 
       <!-- Image Block 23 -->
       <div class="image-overlay-block reveal" id="scene-humancopy">
       <img loading="lazy" decoding="async" src="img/25_Humancopy.png" alt="Image 3" class="story-image">
-      <div class="overlay-text overlay-text--top-right overlay-text--panel overlay-text--bordered">
-        <h2>THE END.</h2><p></p>
+
       </div>
     </div>
 
@@ -525,6 +695,32 @@ document.addEventListener('DOMContentLoaded', function () {
 
   io.observe(cheerBlock);
 });
+</script>
+
+<!-- Voice Overs-->
+
+<script>
+function playVoice(id) {
+  const audio = document.getElementById(id);
+
+  // Stop other audio first
+  document.querySelectorAll('audio').forEach(a => {
+    if (a !== audio &&
+      !['backgroundMusic', 'alarmSfx', 'cheerSfx'].includes(a.id)
+    ) {
+      a.pause();
+      a.currentTime = 0;
+    }
+  });
+
+  // Toggle play / pause
+  if (audio.paused) {
+    audio.play().catch(err => console.log("Playback blocked:", err));
+  } else {
+    audio.pause();
+    audio.currentTime = 0;
+  }
+}
 </script>
 </body>
 </html>

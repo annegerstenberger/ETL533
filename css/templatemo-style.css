@@ -135,7 +135,7 @@ a:focus,button:focus{ outline:none; }
 /* position variants */
 .overlay-text--center  { top:50%; left:50%; transform:translate(-50%, -50%); }
 .overlay-text--top-left  { top:200px;  left:100px;  transform:none; }
-.overlay-text--top-right { top:300px;  right: 200px; transform:none; }
+.overlay-text--top-right { top:260px;  right: 100px; transform:none; }
 .overlay-text--bottom-left  { bottom:16px; left:16px;  transform:none; }
 .overlay-text--bottom-right { bottom: 80px; right:100px; transform:none; }
 
@@ -199,4 +199,26 @@ a:focus,button:focus{ outline:none; }
   }
   .swap img{ animation:none !important; }
   .swap img:nth-child(2){ display:none; }
+}
+/* =========================================================
+   VOICE BUTTON (inside overlay text box)
+      ========================================================= */
+.voice-btn {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+    display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 30px; /* ✅ adds a gap below */
+  transition: transform 0.2s ease;
+}
+.voice-btn img {
+  width: 60px;          /* size of your PNG */
+  height: auto;
+    transition: transform 0.2s ease;
+}
+.voice-btn:hover {
+  transform: scale(1.1);
 }
