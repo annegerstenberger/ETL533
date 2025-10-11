@@ -6,7 +6,7 @@
   --brand-hover:#c9302c;
   --accent:#97D3E8;
   --footer-bg:#97D2E8;
-  --text:#606368;
+  --text:#ce4ecc69;
 }
 
 *{ box-sizing:border-box; }
@@ -23,6 +23,17 @@ html,body{
 a{ text-decoration:none; }
 a:focus,button:focus{ outline:none; }
 .container-fluid{ padding-left:0; padding-right:0; overflow-x:hidden; }
+
+/* all text boxes (when you add --panel) */
+.overlay-text--panel{
+  background: rgba(141, 177, 235, 0);   /* ← change this */
+  /* examples:
+     background: #ffffff;              // solid
+     background: rgba(255,255,255,.85);// semi-transparent
+     background: linear-gradient(180deg, rgba(0,0,0,.6), rgba(0,0,0,.35));
+  */
+  backdrop-filter: blur(2px);     /* optional glassy look */
+}
 
 /* =========================================================
    HERO (ABOVE THE FOLD)
@@ -87,15 +98,23 @@ a:focus,button:focus{ outline:none; }
   width:100vw; max-width:100vw;
   margin-left:calc(-50vw + 50%); margin-right:calc(-50vw + 50%);
 }
-.image-overlay-block img{
-  display:block; margin:0; width:100vw; max-width:100vw; height:auto;
-  aspect-ratio:16/9; object-fit:cover;
+/* Wrapper must be positioning context */
+.image-overlay-block { position: relative; 
 }
+
+/* Base: look only (no position) */
 .overlay-text{
-  position:absolute; top:50%; left:50%; transform:translate(-50%,-50%);
-  color:#fff; text-align:center;
-  background:rgba(145,34,34,0.5);
-  padding:20px; border-radius:8px; max-width:90%;
+  position: absolute;
+  color: #000000;
+  padding: 20px;
+  border-radius: 8px;
+  max-width: 90%;
+  /* no top/left/transform here */
+}
+/* Solid border */
+.overlay-text--bordered{
+  border: 2px solid #010101;   /* color + thickness */
+  border-radius: 12px;         /* keep your rounded corners */
 }
 .overlay-text h2{ margin:0 0 10px; font-size:28px; }
 .overlay-text p{ font-size:18px; line-height:1.5; }
@@ -106,6 +125,15 @@ a:focus,button:focus{ outline:none; }
   transition:transform 900ms cubic-bezier(.22,1,.36,1);
 }
 .image-overlay-block.reveal.is-visible img{ transform:translateY(0); }
+
+
+/* position variants */
+.overlay-text--center  { top:50%; left:50%; transform:translate(-50%, -50%); }
+.overlay-text--top-left  { top:16px;  left:16px;  transform:none; }
+.overlay-text--top-right { top:30px;  right: 30px; transform:none; }
+.overlay-text--bottom-left  { bottom:16px; left:16px;  transform:none; }
+.overlay-text--bottom-right { bottom:16px; right:16px; transform:none; }
+
 
 /* =========================================================
    SWAP / CROSS-FADE (TWO IMAGES) ALARM ANIMATION 
