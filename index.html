@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Where is Wally - Responsive HTML CSS Template</title>
+    <title>Adventure of Wally - Responsive HTML CSS Template</title>
     
 
 <!--
@@ -35,7 +35,7 @@ https://templatemo.com/tm-504-page-one
 
         <div class="container-fluid" id="main">
             <!-- Landing Page -->
-            <section class="tm-section tm-section-home" id="home" style="background-image: url('img/1_Landing.jpg');">
+            <section class="tm-section tm-section-home" id="home" style="background-image: url('img/1_Landing.png');">
                 <div style="position: relative; width: 100%; height: 100%; min-height: 100vh;">
                   <div class="music-btn-container">
                     <button id="playMusicBtn">Start here</button>
@@ -55,14 +55,15 @@ https://templatemo.com/tm-504-page-one
 
     <!-- Image Block 1 -->
 
-  <div class="story-block">
+  <div class="story-block reveal">
       <img loading="lazy" decoding="async" src="img/2_Human.png" alt="Image 1" class="story-image">
-    </div>
+</div>
 
     <!-- Image Block 2 -->
-    <div class="story-block reveal">
+    <div class="story-block">
       <img loading="lazy" decoding="async" src="img/3_Body.png" alt="Image 1" class="story-image">
-    </div>
+    
+      </div>
 
     <!-- Image Block 3 -->
     <div class="story-block reveal">
@@ -89,14 +90,12 @@ https://templatemo.com/tm-504-page-one
     </div>
     
 <!-- Image Block 7 -->
-    <div class="story-block reveal">
-      <img loading="lazy" decoding="async" src="img/8_Alarm2.png" alt="Image 3" class="story-image">
-    </div>
-
-    <!-- Image Block 8 -->
-    <div class="story-block reveal">
-      <img loading="lazy" decoding="async" src="img/9_Alarm3.png" alt="Image 3" class="story-image">
-    </div>
+    <div class="story-block reveal" id="alarm-block">
+  <div class="swap" aria-label="Before/After illustration">
+    <img src="img/8_Alarm2.png" alt="Before">
+    <img src="img/9_Alarm3.png"  alt="After">
+  </div>
+</div>
 
     <!-- Image Block 9 -->
     <div class="story-block reveal">
@@ -332,6 +331,64 @@ document.addEventListener('DOMContentLoaded', function () {
     el.style.transitionDelay = ((i % 4) * 80) + 'ms';
     io.observe(el);
   });
+});
+</script>
+<!-- Alarm SFX (looping, but we’ll fade/pause it via JS) https://pixabay.com/sound-effects/siren-327233/ -->
+<audio id="alarmSfx" preload="auto" loop>
+  <source src="img/siren-327233.mp3" type="audio/mpeg">
+  <!-- optional: <source src="audio/alarm.ogg" type="audio/ogg"> -->
+</audio>
+<script>
+// Smooth volume fade helper
+function fadeVolume(audio, to = 0, duration = 600) {
+  const from = audio.volume || 0;
+  const start = performance.now();
+  if (to > 0 && audio.paused) {
+    // try to start playback; if blocked, the user hasn't interacted yet
+    audio.play().catch(() => {});
+  }
+  function step(now) {
+    const t = Math.min(1, (now - start) / duration);
+    const v = from + (to - from) * t;
+    audio.volume = Math.max(0, Math.min(1, v));
+    if (t < 1) {
+      requestAnimationFrame(step);
+    } else if (to === 0) {
+      // fully faded out: stop so it doesn't keep “playing silently”
+      audio.pause();
+      audio.currentTime = 0;
+    }
+  }
+  requestAnimationFrame(step);
+}
+
+document.addEventListener('DOMContentLoaded', function () {
+  const alarmBlock = document.getElementById('alarm-block');
+  const alarm = document.getElementById('alarmSfx');
+  if (!alarmBlock || !alarm) return;
+
+  // start silent
+  alarm.volume = 0;
+
+  // Observe visibility of the alarm block
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        // In view → fade in to comfortable level (tweak 0.35–0.5)
+        fadeVolume(alarm, 0.4, 500);
+      } else {
+        // Out of view (up or down) → fade out, then pause
+        fadeVolume(alarm, 0, 500);
+      }
+    });
+  }, {
+    root: null,
+    // Trigger a hair before it's fully in view; tweak to taste
+    rootMargin: '0px 0px -10% 0px',
+    threshold: 0.25
+  });
+
+  io.observe(alarmBlock);
 });
 </script>
 </body>
