@@ -195,3 +195,35 @@ a:focus,button:focus{ outline:none; }
   .swap img{ animation:none !important; }
   .swap img:nth-child(2){ display:none; }
 }
+/* =========================================================
+  Glossary Card (popup)
+   ========================================================= */
+.glossary-card{
+  position: fixed; inset: 0; display: none;
+  background: rgba(0,0,0,.55);
+  z-index: 9999;
+}
+.glossary-card:target{ display: grid; place-items: center; }
+
+.glossary-card__panel{
+  position: relative;
+  width: min(560px, 90vw);
+  max-height: 80vh; overflow: auto;
+  background: #fff; color: #222;
+  border-radius: 14px; padding: 20px 24px;
+  box-shadow: 0 20px 60px rgba(0,0,0,.35);
+}
+.glossary-card__panel h3{ margin: 0 0 .5rem; }
+.glossary-card__panel p{ margin: 0 0 .75rem; }
+
+.glossary-card__close{
+  position: absolute; top: 10px; right: 14px;
+  font-size: 28px; text-decoration: none; color: #666;
+}
+.glossary-card__close:hover{ color: #000; }
+
+/* Optional: prevent background scroll while a card is open (modern browsers) */
+body:has(.glossary-card:target){ overflow: hidden; }
+
+/* Optional: style for inline links */
+a.gloss-link{ text-decoration: underline; }
