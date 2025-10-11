@@ -1,21 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+<head> <!--section of your HTML is the metadata zone — it doesn’t display on the page, but it tells the browser how to prepare and load the page.-->
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Where is Wally - Responsive HTML CSS Template</title>
+    <title>Adventure of Wally - Responsive HTML CSS Template</title>
+    
+
 <!--
 Page One Template
 https://templatemo.com/tm-504-page-one
 -->
+
+  <!-- Preload hero image -->
+  <link rel="preload" as="image" href="img/1_Landing.png">
+
     <!-- load stylesheets -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400">  <!-- Google web font "Open Sans" -->
-    <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">                <!-- Font Awesome -->
-    <link rel="stylesheet" href="css/bootstrap.min.css">                                      <!-- Bootstrap style -->
-    <link rel="stylesheet" href="css/magnific-popup.css">                                     <!-- Magnific Popup -->
-    <link rel="stylesheet" href="css/templatemo-style.css">                                   <!-- Templatemo style -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400">  <!-- Google web font "Open Sans" -->          <!-- Font Awesome -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">                                      <!-- Bootstrap style -->                                   <!-- Magnific Popup -->
+    <link rel="stylesheet" href="css/templatemo-style.css">     
+
+                              <!-- Templatemo style -->
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -25,19 +31,23 @@ https://templatemo.com/tm-504-page-one
           <![endif]-->
       </head>
 
-      <body>
-        
+      <body> <!--The visible stuff (your story, images, buttons, etc.) goes inside here-->
+
         <div class="container-fluid" id="main">
-            <!-- Home -->
-            <section class="tm-section tm-section-home" id="home" style="background-image: url('img/bg-01.jpg');">
+            <!-- Landing Page -->
+            <section class="tm-section tm-section-home" id="home" style="background-image: url('img/1_Landing.png');">
                 <div style="position: relative; width: 100%; height: 100%; min-height: 100vh;">
                   <div class="music-btn-container">
                     <button id="playMusicBtn">Start here</button>
-                    <audio id="backgroundMusic" src="img/HoliznaCC0-Death-trimmed.mov" loop></audio>
+                    <audio id="backgroundMusic" preload="auto" loop>
+  <source src="img/HoliznaCC0-Death-trimmed.m4a" type="audio/mp4">
+  
+  <!-- Fallback text -->
+  Your browser does not support HTML5 audio.
+</audio>
                   </div>
                 </div>
     </section> 
-  <div class="section spacer-section content-spacer visible" data-section-behavior="default-spacer" data-layer-name="over" style="height: 10px; background: #f6f5f5; width: 100%; display: block;"></div>
         
   <!-- Digital Story Section -->
 <section id="story" class="tm-section story-section">
@@ -45,39 +55,171 @@ https://templatemo.com/tm-504-page-one
 
     <!-- Image Block 1 -->
 
-  <div class="story-block">
-      <img src="img/bg-02.jpg" alt="Image 1" class="story-image">
+  <div class="image-overlay-block reveal">
+      <img src="img/2_Human.png" alt="Image 1">
+  <div class="overlay-text overlay-text--top-right overlay-text--panel overlay-text--bordered">
+    <h2>Title</h2><p>Corner text.</p>
+    </div>
     </div>
 
-    <div class="story-block">
-      <img src="img/bg-03.jpg" alt="Image 1" class="story-image">
-    </div>
+    <!-- Image Block 2 -->
+    <div class="image-overlay-block reveal">
+      <img src="img/3_Body.png" alt="Image 1">
+     <div class="overlay-text overlay-text--top-left overlay-text--panel overlay-text--bordered">
+    <h2>Title</h2><p>Corner text <p>The <a href="#g-circulatory" class="gloss-link">circulatory system</a> moves blood around the body.</p>.</p>
+      </div>
+      </div>
 
-    <div class="story-block">
-      <img src="img/bg-07.jpg" alt="Image 1" class="story-image">
-    </div>
+    <!-- Image Block 3 -->
+   <div class="image-overlay-block reveal">
+  <img src="img/6_Bloodstream2.png" alt="Image 3">
+  <div class="overlay-text overlay-text--top-left overlay-text--panel overlay-text--bordered">
+    <h2>Title</h2><p>Corner text.</p>
+  </div>
+  </div>
 
-    <div class="story-block">
-      <img src="img/bg-08.jpg" alt="Image 1" class="story-image">
-    </div>
+    <!-- Image Block 4 -->
+    <div class="image-overlay-block reveal">
+      <img src="img/5_skatepark.png" alt="Image 1">
+      <div class="overlay-text overlay-text--bottom-right overlay-text--panel overlay-text--bordered">
+        <h2>Title</h2><p>Corner text.</p>
+      </div>
+      </div>
 
-    <!-- Image Block 2 with Text -->
-   <div class="image-overlay-block">
-  <img src="img/bg-04.jpg" alt="Image with overlay text">
-  <div class="overlay-text">
-    <h2>Your Title Here</h2>
-    <p>This is your paragraph of text.</p>
+    <!-- Image Block 6 -->
+    <div class="image-overlay-block reveal">
+      <img src="img/7_Alarm1.png" alt="Image 3">
+      <div class="overlay-text overlay-text--top-right overlay-text--panel overlay-text--bordered">
+        <h2>Title</h2><p>Corner text.</p>
+    </div>
+      </div>
+
+<!-- Image Block 7 -->
+    <div class="story-block reveal" id="alarm-block">
+  <div class="swap" aria-label="Before/After illustration">
+    <img src="img/8_Alarm2.png" alt="Before">
+    <img src="img/9_Alarm3.png"  alt="After">
   </div>
 </div>
 
-    <!-- Image Block 4 -->
-    <div class="story-block">
-      <img src="img/bg-05.jpg" alt="Image 3" class="story-image">
+    <!-- Image Block 9 -->
+    <div class="image-overlay-block reveal">
+      <img loading="lazy" decoding="async" src="img/10_Alarm4.png" alt="Image 3" class="story-image">
+      <div class="overlay-text overlay-text--top-right overlay-text--panel overlay-text--bordered">
+        <h2>Title</h2><p>Corner text.</p>
+      </div>
     </div>
-    
-<!-- Image Block 5 -->
-    <div class="story-block">
-      <img src="img/bg-06.jpg" alt="Image 3" class="story-image">
+
+      <!-- Image Block 10 -->
+    <div class="image-overlay-block reveal">
+      <img loading="lazy" decoding="async" src="img/11_HumanHurt.png" alt="Image 3" class="story-image">
+      <div class="overlay-text overlay-text--bottom-left overlay-text--panel overlay-text--bordered">
+        <h2>Title</h2><p>Corner text.</p>
+      </div>
+    </div>
+
+      <!-- Image Block 11 -->
+    <div class="image-overlay-block reveal">
+      <img loading="lazy" decoding="async" src="img/12_SkateAccident.png" alt="Image 3" class="story-image">
+      <div class="overlay-text overlay-text--bottom-right overlay-text--panel overlay-text--bordered">
+        <h2>Title</h2><p>Corner text.</p>
+      </div>
+    </div>
+
+      <!-- Image Block 12-->
+      <div class="image-overlay-block reveal">
+      <img loading="lazy" decoding="async" src="img/13_Alarm5copy.png" alt="Image 3" class="story-image">
+      <div class="overlay-text overlay-text--top-right overlay-text--panel overlay-text--bordered">
+        <h2>Title</h2><p>Corner text.</p>
+      </div>
+    </div>
+
+      <!-- Image Block 13 -->
+      <div class="image-overlay-block reveal">
+      <img loading="lazy" decoding="async" src="img/14_Nucleus.jpg" alt="Image 3" class="story-image">
+      <div class="overlay-text overlay-text--top-right overlay-text--panel overlay-text--bordered">
+        <h2>Title</h2><p>Corner text.</p>
+      </div>
+    </div>
+
+      <!-- Image Block 14 -->
+      <div class="image-overlay-block reveal">
+      <img loading="lazy" decoding="async" src="img/15_Mitos.jpg" alt="Image 3" class="story-image">
+      <div class="overlay-text overlay-text--top-right overlay-text--panel overlay-text--bordered">
+        <h2>Title</h2><p>Corner text.</p>
+      </div>
+    </div>
+
+      <!-- Image Block 15 -->
+      <div class="image-overlay-block reveal">
+      <img loading="lazy" decoding="async" src="img/16_Lysosomes.jpg" alt="Image 3" class="story-image">
+      <div class="overlay-text overlay-text--top-right overlay-text--panel overlay-text--bordered">
+        <h2>Title</h2><p>Corner text.</p>
+      </div>
+    </div>
+
+      <!-- Image Block 16 -->
+      <div class="image-overlay-block reveal">
+      <img loading="lazy" decoding="async" src="img/18_WallyontheWay.png" alt="Image 3" class="story-image">
+      <div class="overlay-text overlay-text--top-right overlay-text--panel overlay-text--bordered">
+        <h2>Title</h2><p>Corner text.</p>
+      </div>
+    </div>
+
+      <!-- Image Block 17 -->
+      <div class="image-overlay-block reveal">
+      <img loading="lazy" decoding="async" src="img/19_OnSite.png" alt="Image 3" class="story-image">
+      <div class="overlay-text overlay-text--top-right overlay-text--panel overlay-text--bordered">
+        <h2>Title</h2><p>Corner text.</p>
+      </div>
+    </div>
+
+      <!-- Image Block 18 -->
+      <div class="image-overlay-block reveal">
+      <img loading="lazy" decoding="async" src="img/20_Phago1.png" alt="Image 3" class="story-image">
+      <div class="overlay-text overlay-text--bottom-left overlay-text--panel overlay-text--bordered">
+        <h2>Title</h2><p>Corner text.</p>
+      </div>
+    </div>
+
+      <!-- Image Block 19 -->
+      <div class="image-overlay-block reveal">
+      <img loading="lazy" decoding="async" src="img/21_Phago2.png" alt="Image 3" class="story-image">
+      <div class="overlay-text overlay-text--top-right overlay-text--panel overlay-text--bordered">
+        <h2>Title</h2><p>Corner text.</p>
+      </div>
+    </div>
+
+      <!-- Image Block 20 -->
+      <div class="image-overlay-block reveal">
+      <img loading="lazy" decoding="async" src="img/22_Phago3.png" alt="Image 3" class="story-image">
+      <div class="overlay-text overlay-text--top-right overlay-text--panel overlay-text--bordered">
+        <h2>Title</h2><p>Corner text.</p>
+      </div>
+    </div>
+
+      <!-- Image Block 21 -->
+      <div class="image-overlay-block reveal">
+      <img loading="lazy" decoding="async" src="img/23_Phago4.png" alt="Image 3" class="story-image">
+      <div class="overlay-text overlay-text--top-left overlay-text--panel overlay-text--bordered">
+        <h2>Title</h2><p>Corner text.</p>
+      </div>
+        </div>
+
+      <!-- Image Block 22 -->
+    <div class="image-overlay-block reveal">
+      <img loading="lazy" decoding="async" src="img/24_Party.png" alt="Image 3" class="story-image">
+      <div class="overlay-text overlay-text--top-right overlay-text--panel overlay-text--bordered">
+        <h2>Title</h2><p>Corner text.</p>
+      </div>
+    </div>
+
+      <!-- Image Block 23 -->
+      <div class="image-overlay-block reveal">
+      <img loading="lazy" decoding="async" src="img/25_Humancopy.png" alt="Image 3" class="story-image">
+      <div class="overlay-text overlay-text--top-right overlay-text--panel overlay-text--bordered">
+        <h2>Title</h2><p>Corner text.</p>
+      </div>
     </div>
 
     <!-- Add more blocks as needed -->
@@ -87,133 +229,72 @@ https://templatemo.com/tm-504-page-one
          
 
          
-        </div>
-        
-        <!-- load JS files -->
-        <script src="js/jquery-1.11.3.min.js"></script>         <!-- https://jquery.com/download/ -->
-        <script src="js/isotope.pkgd.min.js"></script>          <!-- https://isotope.metafizzy.co/ -->
-        <script src="js/imagesloaded.pkgd.min.js"></script>     <!-- https://imagesloaded.desandro.com/ --> 
-        <script src="js/jquery.magnific-popup.min.js"></script> <!-- http://dimsemenov.com/plugins/magnific-popup/ -->
-        <script src="js/parallax.min.js"></script>
-        <script>     
-            $(document).ready(function () {
-                // Isotope for Gallery
-                if ( $('.iso-box-wrapper').length > 0 ) { 
+       <!-- load JS files -->
+<script src="js/jquery-1.11.3.min.js"></script>
 
-                    var $container  = $('.iso-box-wrapper'), 
-                    $imgs     = $('.iso-box img');
 
-                    $container.imagesLoaded(function () {
-                        $container.isotope({
-                            layoutMode: 'fitRows',
-                            itemSelector: '.iso-box'
-                        });
-                        $imgs.load(function(){
-                            $container.isotope('reLayout');
-                        })
-                    });
-
-                    //filter items on button click
-                    $('.filter-wrapper li a').click(function(){
-                        var $this = $(this), filterValue = $this.attr('data-filter');
-                            $container.isotope({ 
-                                filter: filterValue
-                            });             
-
-                        // don't proceed if already selected
-                        if ( $this.hasClass('selected') ) { 
-                            return false; 
-                        }
-
-                        var filter_wrapper = $this.closest('.filter-wrapper');
-                        filter_wrapper.find('.selected').removeClass('selected');
-                        $this.addClass('selected');
-
-                        return false;
-                    });
-                }
-
-                // Magnific Popup for Gallery
-                $('.iso-box-wrapper').magnificPopup({
-                    delegate: 'a', // child items selector, by clicking on it popup will open
-                    type: 'image',
-                    gallery:{enabled:true}
-                });
-
-                // Smooth scrolling (https://css-tricks.com/snippets/jquery/smooth-scrolling/)
-                // Select all links with hashes
-                $('a[href*="#"]')
-                  // Remove links that don't actually link to anything
-                  .not('[href="#"]')
-                  .not('[href="#0"]')
-                  .click(function(event) {
-                    // On-page links
-                    if (
-                      location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') 
-                      && 
-                      location.hostname == this.hostname
-                    ) {
-                      // Figure out element to scroll to
-                      var target = $(this.hash);
-                      target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
-                      // Does a scroll target exist?
-                      if (target.length) {
-                        // Only prevent default if animation is actually gonna happen
-                        event.preventDefault();
-                        $('html, body').animate({
-                          scrollTop: target.offset().top
-                        }, 600, function() {
-                          // Callback after animation
-                          // Must change focus!
-                          var $target = $(target);
-                          $target.focus();
-                          if ($target.is(":focus")) { // Checking if the target was focused
-                            return false;
-                          } else {
-                            $target.attr('tabindex','-1'); // Adding tabindex for elements not focusable
-                            $target.focus(); // Set focus again
-                          };
-                        });
-                      }
-                    }
-                  });         
-            });
-    </script>   
-<!-- Text-to-Speech script goes here, right before closing </body> -->
-    <script>
-      function speakText(elementId) {
-        const element = document.getElementById(elementId);
-        const text = element.innerText || element.textContent;
-        const utterance = new SpeechSynthesisUtterance(text);
-        speechSynthesis.speak(utterance);
-      }
-
-      function checkAnswer() {
-        const form = document.getElementById('quiz-form');
-        const result = document.getElementById('result');
-        const selectedInput = form.querySelector('input[name="answer"]:checked');
-        const selected = selectedInput ? selectedInput.value : null;
-
-        if (!selected) {
-          result.textContent = "Please select an answer!";
-          result.style.color = "red";
-          return;
-        }
-
-        if (selected === "Paris") {
-          result.textContent = "Correct! 🎉";
-          result.style.color = "green";
-        } else {
-          result.textContent = "Wrong. Try again!";
-          result.style.color = "red";
+<script>
+  // Smooth scrolling
+  $(document).ready(function () {
+    $('a[href*="#"]').not('[href="#"]').not('[href="#0"]').click(function(event) {
+      if (
+        location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') &&
+        location.hostname == this.hostname
+      ) {
+        var target = $(this.hash);
+        target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+        if (target.length) {
+          event.preventDefault();
+          $('html, body').animate({
+            scrollTop: target.offset().top
+          }, 600, function() {
+            var $target = $(target);
+            $target.focus();
+            if (!$target.is(":focus")) {
+              $target.attr('tabindex','-1');
+              $target.focus();
+            }
+          });
         }
       }
-    </script>
+    });
+  });
+
+  // Text-to-Speech
+  function speakText(elementId) {
+    const element = document.getElementById(elementId);
+    const text = element.innerText || element.textContent;
+    const utterance = new SpeechSynthesisUtterance(text);
+    speechSynthesis.speak(utterance);
+  }
+
+  // Quiz checker (optional)
+  function checkAnswer() {
+    const form = document.getElementById('quiz-form');
+    const result = document.getElementById('result');
+    const selectedInput = form.querySelector('input[name="answer"]:checked');
+    const selected = selectedInput ? selectedInput.value : null;
+
+    if (!selected) {
+      result.textContent = "Please select an answer!";
+      result.style.color = "red";
+      return;
+    }
+
+    if (selected === "Paris") {
+      result.textContent = "Correct! 🎉";
+      result.style.color = "green";
+    } else {
+      result.textContent = "Wrong. Try again!";
+      result.style.color = "red";
+    }
+  }
+</script>
 <!-- Footer -->
 <footer class="tm-footer">
   <div class="tm-copyright-div">
      <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/">
-  <img src="img/footer-logo.png" alt="Logo" />
+  <img loading="lazy" decoding="async" src="img/footer-logo.png" alt="Logo" />
 </a>
     <p class="tm-copyright-text">
       &copy; <span class="tm-current-year">2025</span> Anne Gerstenberger.<br>
@@ -243,5 +324,184 @@ window.addEventListener('scroll', () => {
   }
 });
 </script>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  const items = document.querySelectorAll('.reveal');
+
+  // Track scroll direction
+  let lastY = window.pageYOffset || document.documentElement.scrollTop;
+  let scrollingDown = true;
+  window.addEventListener('scroll', () => {
+    const y = window.pageYOffset || document.documentElement.scrollTop;
+    scrollingDown = y > lastY;
+    lastY = y;
+  }, { passive: true });
+
+  if (!('IntersectionObserver' in window)) {
+    items.forEach(el => el.classList.add('is-visible'));
+    return;
+  }
+
+  const io = new IntersectionObserver((entries) => {
+    const vh = window.innerHeight || document.documentElement.clientHeight;
+
+    entries.forEach(entry => {
+      const el = entry.target;
+      const rect = entry.boundingClientRect;
+
+      if (entry.isIntersecting) {
+        // Entering viewport: only animate when scrolling DOWN
+        if (scrollingDown && rect.top > 0) {
+          el.classList.add('is-visible');
+        }
+      } else {
+        // Not intersecting: decide when to reset for next time
+        const leftAtTop = rect.bottom <= 0;      // element is above the viewport
+        const leftAtBottom = rect.top >= vh;     // element is below the viewport
+
+        // Case 1: scrolled DOWN past it → reset
+        if (scrollingDown && leftAtTop) {
+          el.classList.remove('is-visible');
+        }
+
+        // Case 2: scrolled UP above it (so it's now below) → reset
+        if (!scrollingDown && leftAtBottom) {
+          el.classList.remove('is-visible');
+        }
+      }
+    });
+  }, {
+    root: null,
+    rootMargin: '0px 0px -30% 0px',  // tweak if you want earlier/later start
+    threshold: 0.12
+  });
+
+  items.forEach((el, i) => {
+    // Optional tiny stagger
+    el.style.transitionDelay = ((i % 4) * 80) + 'ms';
+    io.observe(el);
+  });
+});
+</script>
+<!-- Alarm SFX (looping, but we’ll fade/pause it via JS) https://pixabay.com/sound-effects/siren-327233/ -->
+<audio id="alarmSfx" preload="auto" loop>
+  <source src="img/siren-327233.mp3" type="audio/mpeg">
+  <!-- optional: <source src="audio/alarm.ogg" type="audio/ogg"> -->
+</audio>
+<script>
+// Smooth volume fade helper
+function fadeVolume(audio, to = 0, duration = 600) {
+  const from = audio.volume || 0;
+  const start = performance.now();
+  if (to > 0 && audio.paused) {
+    // try to start playback; if blocked, the user hasn't interacted yet
+    audio.play().catch(() => {});
+  }
+  function step(now) {
+    const t = Math.min(1, (now - start) / duration);
+    const v = from + (to - from) * t;
+    audio.volume = Math.max(0, Math.min(1, v));
+    if (t < 1) {
+      requestAnimationFrame(step);
+    } else if (to === 0) {
+      // fully faded out: stop so it doesn't keep “playing silently”
+      audio.pause();
+      audio.currentTime = 0;
+    }
+  }
+  requestAnimationFrame(step);
+}
+
+document.addEventListener('DOMContentLoaded', function () {
+  const alarmBlock = document.getElementById('alarm-block');
+  const alarm = document.getElementById('alarmSfx');
+  if (!alarmBlock || !alarm) return;
+
+  // start silent
+  alarm.volume = 0;
+
+  // Observe visibility of the alarm block
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        // In view → fade in to comfortable level (tweak 0.35–0.5)
+        fadeVolume(alarm, 0.4, 500);
+      } else {
+        // Out of view (up or down) → fade out, then pause
+        fadeVolume(alarm, 0, 500);
+      }
+    });
+  }, {
+    root: null,
+    // Trigger a hair before it's fully in view; tweak to taste
+    rootMargin: '0px 0px -10% 0px',
+    threshold: 0.25
+  });
+
+  io.observe(alarmBlock);
+});
+</script>
+<!-- Circulatory System -->
+<section id="g-circulatory" class="glossary-card" role="dialog" aria-labelledby="g-circulatory-title">
+  <div class="glossary-card__panel">
+    <a class="glossary-card__close" href="#" aria-label="Close glossary">×</a>
+    <h3 id="g-circulatory-title">Circulatory System</h3>
+    <p>The body’s transport network of heart, blood, and blood vessels that delivers oxygen and nutrients and removes waste.</p>
+  </div>
+</section>
+
+<!-- White blood cells -->
+<section id="g-wbc" class="glossary-card" role="dialog" aria-labelledby="g-wbc-title">
+  <div class="glossary-card__panel">
+    <a class="glossary-card__close" href="#" aria-label="Close glossary">×</a>
+    <h3 id="g-wbc-title">White Blood Cells</h3>
+    <p>Immune cells that find and fight germs; types include neutrophils, macrophages, and lymphocytes.</p>
+  </div>
+</section>
+
+<!-- Specialised cells -->
+<section id="g-specialised" class="glossary-card" role="dialog" aria-labelledby="g-specialised-title">
+  <div class="glossary-card__panel">
+    <a class="glossary-card__close" href="#" aria-label="Close glossary">×</a>
+    <h3 id="g-specialised-title">Specialised Cells</h3>
+    <p>Cells adapted for particular jobs—for example, nerve cells for signalling or muscle cells for movement.</p>
+  </div>
+</section>
+
+<!-- Nucleus -->
+<section id="g-nucleus" class="glossary-card" role="dialog" aria-labelledby="g-nucleus-title">
+  <div class="glossary-card__panel">
+    <a class="glossary-card__close" href="#" aria-label="Close glossary">×</a>
+    <h3 id="g-nucleus-title">Nucleus</h3>
+    <p>The cell’s “control centre” that stores DNA and coordinates activities like growth and division.</p>
+  </div>
+</section>
+
+<!-- Mitochondria -->
+<section id="g-mitochondria" class="glossary-card" role="dialog" aria-labelledby="g-mitochondria-title">
+  <div class="glossary-card__panel">
+    <a class="glossary-card__close" href="#" aria-label="Close glossary">×</a>
+    <h3 id="g-mitochondria-title">Mitochondria</h3>
+    <p>Organelles that release energy from food molecules—often called the “powerhouses” of the cell.</p>
+  </div>
+</section>
+
+<!-- Lysosome -->
+<section id="g-lysosome" class="glossary-card" role="dialog" aria-labelledby="g-lysosome-title">
+  <div class="glossary-card__panel">
+    <a class="glossary-card__close" href="#" aria-label="Close glossary">×</a>
+    <h3 id="g-lysosome-title">Lysosome</h3>
+    <p>A recycling and cleanup vesicle filled with enzymes that break down waste and worn-out cell parts.</p>
+  </div>
+</section>
+
+<!-- Phagocytosis -->
+<section id="g-phagocytosis" class="glossary-card" role="dialog" aria-labelledby="g-phagocytosis-title">
+  <div class="glossary-card__panel">
+    <a class="glossary-card__close" href="#" aria-label="Close glossary">×</a>
+    <h3 id="g-phagocytosis-title">Phagocytosis</h3>
+    <p>A process where a cell (like a macrophage) engulfs and digests particles such as bacteria.</p>
+  </div>
+</section>
 </body>
 </html>
