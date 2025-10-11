@@ -112,3 +112,46 @@ a:focus, button:focus { outline: none; }
   .overlay-text h2 { font-size: 22px; }
   .overlay-text p { font-size: 16px; }
 }
+/* Keep your gap and layout intact */
+.story-block { 
+  margin-bottom: 10px; 
+  position: relative; 
+  overflow: hidden;   /* optional: clips the child while it slides in */
+}
+
+/* Slide-up only (no fade), applied to the CHILD image */
+.story-block.reveal .story-image {
+  transform: translateY(80px);               /* start below */
+  transition: transform 900ms cubic-bezier(.22,1,.36,1);
+  will-change: transform;
+}
+.story-block.reveal.is-visible .story-image {
+  transform: translateY(0);
+}
+
+/* If you want the overlay slide too */
+.image-overlay-block { position: relative; overflow: hidden; }
+.image-overlay-block.reveal img {
+  transform: translateY(80px);
+  transition: transform 900ms cubic-bezier(.22,1,.36,1);
+}
+.image-overlay-block.reveal.is-visible img {
+  transform: translateY(0);
+}
+
+/* Respect reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .story-block.reveal .story-image,
+  .image-overlay-block.reveal img {
+    transform: none !important;
+    transition: none !important;
+  }
+}
+/* add this line for consistency */
+.image-overlay-block { position: relative; overflow: hidden; margin-bottom: 10px; }
+
+/* and remove the bottom margin from the overlay image */
+.image-overlay-block img {
+  display: block; width: 100vw; max-width: 100vw; height: auto; margin: 0; /* was 0 0 10px 0 */
+  aspect-ratio: 16 / 9; object-fit: cover;
+}
