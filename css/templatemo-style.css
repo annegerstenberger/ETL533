@@ -108,8 +108,13 @@ a:focus,button:focus{ outline:none; }
   color: #000000;
   padding: 20px;
   border-radius: 8px;
-  max-width: 90%;
-  /* no top/left/transform here */
+  max-width: 10%;
+  /* no top/left/transform here */  /* ✅ sets maximum width of text box */
+  width: 90%;         /* responsive fallback for smaller screens */
+  word-wrap: break-word;  /* ensures long words don’t overflow */
+  overflow-wrap: break-word;
+  line-height: 1.5;
+  text-align: left;   /* or center/right, depending on your design */
 }
 /* Solid border */
 .overlay-text--bordered{
