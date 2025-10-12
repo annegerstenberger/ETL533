@@ -68,13 +68,31 @@
 .card-icon:hover {
   transform: scale(1.05);
 }
+
+ /* Force glossary bottom links to appear as buttons */
+  .back-link {
+    display:inline-block;
+    background:#983333;
+    color:#fff !important;
+    text-decoration:none !important;
+    font-weight:600;
+    padding:10px 18px;
+    border-radius:8px;
+    margin:30px 10px 40px 0;
+    box-shadow:0 2px 6px rgba(0,0,0,0.15);
+    transition:background-color .3s ease, transform .2s ease;
+  }
+  .back-link:hover {
+    background:#c9302c;
+    transform:translateY(-2px);
+  }
   </style>
 </head>
 <body>
   <div class="wrap">
     <header>
       <h1>Glossary</h1>
-      <a href="index.html">← Back to story</a>
+     
     </header>
 
     
@@ -138,7 +156,10 @@
   <img src="img/back-to-wally.png" alt="Back to Wally" class="card-icon">
 </a>
     </section>
-
+</div>
+  <div style="text-align:center; margin-top:30px;">
+    <a href="index.html" class="back-link">← Back to Story</a>
+    <a href="references.html" class="back-link">To References</a>
   </div>
 </body>
 </html>
