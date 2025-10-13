@@ -106,9 +106,9 @@ a:focus,button:focus{ outline:none; }
 .overlay-text{
   position: absolute;
   color: #000000;
-  padding: 20px;
+  padding: 10px;
   border-radius: 8px;
-  max-width: 10%;
+  max-width: 20%;
   /* no top/left/transform here */  /* ✅ sets maximum width of text box */
   width: 90%;         /* responsive fallback for smaller screens */
   word-wrap: break-word;  /* ensures long words don’t overflow */
@@ -134,8 +134,8 @@ a:focus,button:focus{ outline:none; }
 
 /* position variants */
 .overlay-text--center  { top:50%; left:50%; transform:translate(-50%, -50%); }
-.overlay-text--top-left  { top:200px;  left:100px;  transform:none; }
-.overlay-text--top-right { top:260px;  right: 100px; transform:none; }
+.overlay-text--top-left  { top:50px;  left:50px;  transform:none; }
+.overlay-text--top-right { top:50px;  right: 40px; transform:none; }
 .overlay-text--bottom-left  { bottom:16px; left:16px;  transform:none; }
 .overlay-text--bottom-right { bottom: 80px; right:100px; transform:none; }
 
